@@ -1,0 +1,13 @@
+
+<table>
+  <tr>
+    <th>Peeps</th>
+  </tr>
+
+  <% @peeps.each do |peep| %>
+    <tr>
+      <td><%= peep.text %></td>
+      <td><%= link_to 'Show', peep_path(peep) %></td>
+    </tr>
+  <% end %>
+</table>
