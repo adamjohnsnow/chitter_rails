@@ -2,7 +2,7 @@ class PeepsController < ApplicationController
   def index
     @peeps = Peep.all
   end
-  
+
   def new
   end
 
@@ -15,9 +15,10 @@ class PeepsController < ApplicationController
   def show
     @peep = Peep.find(params[:id])
   end
-end
 
 private
   def peep_params
     params.require(:peep).permit(:text)
   end
+
+end
